@@ -16,7 +16,7 @@ def sendmessage(title, message):
     notice.show()
     return
 
-def on_raw_msg(msg:dict):
+def on_raw_msg(msg:dict, listener:dict):
         print(f'{Style.DIM}{Fore.YELLOW}MESSAGE: {Fore.RESET}{msg["u"]}: {msg["p"]}{Style.RESET_ALL}')
         msgu = msg["u"]
         msgp = msg["p"]

@@ -6,13 +6,13 @@ from MeowerBot import Client
 from colorama import Fore, Style
 import notify2
 
-c = Client("bot-username-goes-here","bot-password-goes-here",False) 
+c = Client("bot-username","bot-password",False) 
 
 os.system('clear')
 
 def sendmessage(title, message):
     notify2.init("Test")
-    notice = notify2.Notification(title, message, '/home/sus/Downloads/icon_21.2ef6b9a3.svg')
+    notice = notify2.Notification(title, message, f'{os.getcwd()}/meowy.svg')
     notice.show()
     return
 
